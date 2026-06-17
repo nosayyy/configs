@@ -1,0 +1,47 @@
+
+include "keybinds.kdl"
+include "layout.kdl"
+include "rules.kdl"
+
+
+input {
+    keyboard {
+        xkb {
+            layout "us,ru"
+            options "grp:alt_shift_toggle"
+        }
+
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+}
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 20
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+/-output "eDP-1" {
+    mode "1920x1080@120.030"
+    scale 2
+    transform "normal"
+    position x=1280 y=0
+}
+
+spawn-at-startup "mako"
+spawn-at-startup "waybar"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/user/Изображения/wallpaper.jpg"
+
+screenshot-path "~/Изображения/screenshots/%Y-%m-%d %H-%M-%S.png"
+
+prefer-no-csd true
