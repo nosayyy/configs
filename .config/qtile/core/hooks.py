@@ -3,7 +3,7 @@ import subprocess
 from libqtile import hook, qtile
 from libqtile.dgroups import dgroup
 
-from ..settings import terminal, notifier_cmd
+from settings import terminal, notifier_cmd
 
 
 @hook.subscribe.startup_once

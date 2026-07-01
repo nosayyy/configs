@@ -1,18 +1,28 @@
 import os
+import shutil
+import sys
 
 # Клавиша-модификатор
 mod = "mod4"
 
+
+def _pick_terminal():
+    for candidate in ("foot", "alacritty", "kitty", "wezterm", "gnome-terminal", "xterm"):
+        if shutil.which(candidate):
+            return candidate
+    return "xterm"
+
+
 # Приложения по умолчанию
-terminal     = "foot"
+terminal     = _pick_terminal()
 browser      = "firefox"
 file_manager = "thunar"
 
 # Пути
 BASE_DIR       = os.path.expanduser("~/.config/qtile")
 WALLPAPER_PATH = os.path.expanduser("~/Pictures/wallpaper.jpg")
-launcher_cmd   = f"python3 {BASE_DIR}/apps/launcher.py"
-notifier_cmd   = f"python3 {BASE_DIR}/apps/notifier.py"
+launcher_cmd   = f"{sys.executable} {BASE_DIR}/apps/launcher.py"
+notifier_cmd   = f"{sys.executable} {BASE_DIR}/apps/notifier.py"
 
 # Внешний вид панели
 BAR_SIZE      = 22

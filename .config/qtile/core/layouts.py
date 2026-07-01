@@ -1,7 +1,7 @@
 from libqtile import layout
 from libqtile.config import Match
 
-from ..settings import FG, BG
+from settings import FG, BG
 
 layouts = [
     layout.Max(),

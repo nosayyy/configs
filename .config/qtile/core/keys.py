@@ -1,7 +1,7 @@
 from libqtile.config import Key
 from libqtile.lazy import lazy
 
-from ..settings import mod, terminal, browser, file_manager, launcher_cmd, BASE_DIR
+from settings import mod, terminal, browser, file_manager, launcher_cmd, BASE_DIR
 
 keys = [
     # Приложения

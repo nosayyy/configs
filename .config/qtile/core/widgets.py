@@ -1,7 +1,7 @@
 from libqtile import widget
 from libqtile.lazy import lazy
 
-from ..settings import (
+from settings import (
     BG, FG, SEP_COLOR, INACTIVE_WS, URGENT_BORDER, LOW_BATTERY,
     FONT_SIZE, wlan_interface
 )
